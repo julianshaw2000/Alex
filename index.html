@@ -16,7 +16,7 @@
     <!-- Header -->
     <header class="bg-blue-600 text-white py-4">
       <div class="container mx-auto flex justify-between items-center px-4">
-        <h1 class="text-2xl font-bold">AWC2020 Ltd</h1>
+        <h2 class="text-2xl font-bold">AWC2020</h2>
         <nav>
           <ul class="flex space-x-4">
             <li><a href="#home" class="hover:text-blue-200">Home</a></li>
@@ -531,22 +531,22 @@
         <p>&copy; 2025 AWC2020 Ltd. All rights reserved.</p>
       </div>
     </footer>
-  </body>
-  <!-- 
-  <script>
-    document.querySelector("form").addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const form = e.target;
-      const res = await fetch(form.action, {
-        method: form.method,
-        body: new FormData(form),
-        headers: { Accept: "application/json" },
+
+    <script>
+      document.querySelector("form").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const res = await fetch(form.action, {
+          method: form.method,
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        });
+        if (res.ok) {
+          form.innerHTML = "<p>Thanks for your message!</p>";
+        } else {
+          form.querySelector("button").textContent = "Oops, try again";
+        }
       });
-      if (res.ok) {
-        form.innerHTML = "<p>Thanks for your message!</p>";
-      } else {
-        form.querySelector("button").textContent = "Oops, try again";
-      }
-    });
-  </script> -->
+    </script>
+  </body>
 </html>
