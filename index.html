@@ -10,6 +10,18 @@
         object-fit: cover;
         height: 300px; /* Adjust as needed */
       }
+      .carousel-images {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+      }
+      .carousel-images img {
+        flex-shrink: 0;
+        width: 100%; /* Ensure each image takes up the full width of the container */
+      }
+      #carousel {
+        overflow: hidden; /* Hide images outside the visible area */
+      }
     </style>
   </head>
   <body class="bg-gray-100 font-sans">
@@ -43,7 +55,7 @@
           aria-roledescription="carousel"
           aria-label="Farming Images"
         >
-          <div class="carousel-images flex transition-transform duration-500">
+          <div class="carousel-images">
             <img
               src="./wheat.png"
               alt="Golden wheat fields under a blue sky"
